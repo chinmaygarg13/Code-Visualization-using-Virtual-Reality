@@ -1,0 +1,812 @@
+(gdb) Breakpoint 1 at 0x75e: file main.cpp, line 6.
+(gdb) Starting program: /home/chinmay/Documents/btp/out_of_bound/a.out 
+
+Breakpoint 1, main () at main.cpp:6
+6		int fibonacci[5] = {0};
+7		fibonacci[1] = 1;
+fibonacci = {0, 0, 0, 0, 0}
+start = 0
+8		int start = 1;
+fibonacci = {0, 1, 0, 0, 0}
+start = 0
+9		for(int i = start++; i < sizeof(fibonacci) / sizeof(fibonacci[0]); ++i) {
+i = 0
+fibonacci = {0, 1, 0, 0, 0}
+start = 1
+10			fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];	
+i = 1
+fibonacci = {0, 1, 0, 0, 0}
+start = 2
+9		for(int i = start++; i < sizeof(fibonacci) / sizeof(fibonacci[0]); ++i) {
+i = 1
+fibonacci = {0, 0, 0, 0, 0}
+start = 2
+10			fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];	
+i = 2
+fibonacci = {0, 0, 0, 0, 0}
+start = 2
+9		for(int i = start++; i < sizeof(fibonacci) / sizeof(fibonacci[0]); ++i) {
+i = 2
+fibonacci = {0, 0, 0, 0, 0}
+start = 2
+10			fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];	
+i = 3
+fibonacci = {0, 0, 0, 0, 0}
+start = 2
+9		for(int i = start++; i < sizeof(fibonacci) / sizeof(fibonacci[0]); ++i) {
+i = 3
+fibonacci = {0, 0, 0, 0, 0}
+start = 2
+10			fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];	
+i = 4
+fibonacci = {0, 0, 0, 0, 0}
+start = 2
+9		for(int i = start++; i < sizeof(fibonacci) / sizeof(fibonacci[0]); ++i) {
+i = 4
+fibonacci = {0, 0, 0, 0, 0}
+start = 2
+12		return 0;
+fibonacci = {0, 0, 0, 0, 0}
+start = 2
+13	}
+fibonacci = {0, 0, 0, 0, 0}
+start = 2
+__libc_start_main (main=0x800075a <main()>, argc=1, argv=0x7ffffffee3f8, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7ffffffee3e8) at ../csu/libc-start.c:344
+344	../csu/libc-start.c: No such file or directory.
+result = 0
+unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 8526764270600809585, 134219344, 140737488282608, 0, 0, -8526781870719406991, -8526780777412072335}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x7ffffffee408, 0x7fffff626170}, data = {prev = 0x0, cleanup = 0x0, canceltype = -72696}}}
+not_first_call = <optimized out>
+__GI_exit (status=0) at exit.c:139
+139	exit.c: No such file or directory.
+No locals.
+138	in exit.c
+No locals.
+139	in exit.c
+No locals.
+__run_exit_handlers (status=0, listp=0x7ffffeaa4718 <__exit_funcs>, run_list_atexit=run_list_atexit@entry=true, run_dtors=run_dtors@entry=true) at exit.c:40
+40	in exit.c
+No locals.
+45	in exit.c
+No locals.
+40	in exit.c
+No locals.
+45	in exit.c
+No locals.
+46	in exit.c
+No locals.
+__GI___call_tls_dtors () at cxa_thread_atexit_impl.c:145
+145	cxa_thread_atexit_impl.c: No such file or directory.
+No locals.
+146	in cxa_thread_atexit_impl.c
+No locals.
+164	in cxa_thread_atexit_impl.c
+No locals.
+__run_exit_handlers (status=0, listp=0x7ffffeaa4718 <__exit_funcs>, run_list_atexit=run_list_atexit@entry=true, run_dtors=run_dtors@entry=true) at exit.c:56
+56	exit.c: No such file or directory.
+cur = <optimized out>
+59	in exit.c
+cur = <optimized out>
+61	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+70	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+73	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+76	in exit.c
+f = 0x7ffffeaa5e50 <initial+208>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+77	in exit.c
+f = 0x7ffffeaa5e50 <initial+208>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+106	in exit.c
+atfct = <optimized out>
+onfct = <optimized out>
+cxafct = 0x89aac8cf1b676c71
+f = 0x7ffffeaa5e50 <initial+208>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+103	in exit.c
+atfct = <optimized out>
+onfct = <optimized out>
+cxafct = 0x89aac8cf1b676c71
+f = 0x7ffffeaa5e50 <initial+208>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+108	in exit.c
+atfct = <optimized out>
+onfct = <optimized out>
+cxafct = 0x89aac8cf1b676c71
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+106	in exit.c
+atfct = <optimized out>
+onfct = <optimized out>
+cxafct = 0x89aac8cf1b676c71
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+108	in exit.c
+atfct = <optimized out>
+onfct = <optimized out>
+cxafct = 0x7fffff1131d0 <std::ios_base::Init::~Init()>
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+109	in exit.c
+atfct = <optimized out>
+onfct = <optimized out>
+cxafct = <optimized out>
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+112	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+114	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+70	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+73	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+76	in exit.c
+f = 0x7ffffeaa5e30 <initial+176>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+77	in exit.c
+f = 0x7ffffeaa5e30 <initial+176>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+106	in exit.c
+atfct = <optimized out>
+onfct = <optimized out>
+cxafct = 0x89aac86c99076c71
+f = 0x7ffffeaa5e30 <initial+176>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+103	in exit.c
+atfct = <optimized out>
+onfct = <optimized out>
+cxafct = 0x89aac86c99076c71
+f = 0x7ffffeaa5e30 <initial+176>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+108	in exit.c
+atfct = <optimized out>
+onfct = <optimized out>
+cxafct = 0x89aac86c99076c71
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+106	in exit.c
+atfct = <optimized out>
+onfct = <optimized out>
+cxafct = 0x89aac86c99076c71
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+108	in exit.c
+atfct = <optimized out>
+onfct = <optimized out>
+cxafct = 0x7fffff40f0e0 <_dl_fini>
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+0x0000000008000710 in __do_global_dtors_aux ()
+No symbol table info available.
+Single stepping until exit from function __do_global_dtors_aux,
+which has no line number information.
+0x0000000008000680 in deregister_tm_clones ()
+No symbol table info available.
+Single stepping until exit from function deregister_tm_clones,
+which has no line number information.
+0x0000000008000738 in __do_global_dtors_aux ()
+No symbol table info available.
+Single stepping until exit from function __do_global_dtors_aux,
+which has no line number information.
+0x00000000080008a4 in _fini ()
+No symbol table info available.
+Single stepping until exit from function _fini,
+which has no line number information.
+0x00007ffffecdbc10 in __do_global_dtors_aux () from /lib/x86_64-linux-gnu/libm.so.6
+No symbol table info available.
+Single stepping until exit from function __do_global_dtors_aux,
+which has no line number information.
+0x00007ffffecdbb80 in deregister_tm_clones () from /lib/x86_64-linux-gnu/libm.so.6
+No symbol table info available.
+Single stepping until exit from function deregister_tm_clones,
+which has no line number information.
+0x00007ffffecdbc38 in __do_global_dtors_aux () from /lib/x86_64-linux-gnu/libm.so.6
+No symbol table info available.
+Single stepping until exit from function __do_global_dtors_aux,
+which has no line number information.
+_fini () at ../sysdeps/x86_64/crti.S:80
+80	../sysdeps/x86_64/crti.S: No such file or directory.
+No locals.
+_fini () at ../sysdeps/x86_64/crtn.S:44
+44	../sysdeps/x86_64/crtn.S: No such file or directory.
+No locals.
+_fini () at ../sysdeps/x86_64/crtn.S:45
+45	in ../sysdeps/x86_64/crtn.S
+No locals.
+__run_exit_handlers (status=0, listp=0x7ffffeaa4718 <__exit_funcs>, run_list_atexit=run_list_atexit@entry=true, run_dtors=run_dtors@entry=true) at exit.c:109
+109	exit.c: No such file or directory.
+atfct = <optimized out>
+onfct = <optimized out>
+cxafct = <optimized out>
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+112	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+114	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+70	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+73	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+76	in exit.c
+f = 0x7ffffeaa5e10 <initial+144>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+77	in exit.c
+f = 0x7ffffeaa5e10 <initial+144>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+112	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+114	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+70	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+73	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+76	in exit.c
+f = 0x7ffffeaa5df0 <initial+112>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+77	in exit.c
+f = 0x7ffffeaa5df0 <initial+112>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+112	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+114	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+70	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+73	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+76	in exit.c
+f = 0x7ffffeaa5dd0 <initial+80>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+77	in exit.c
+f = 0x7ffffeaa5dd0 <initial+80>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+112	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+114	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+70	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+73	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+76	in exit.c
+f = 0x7ffffeaa5db0 <initial+48>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+77	in exit.c
+f = 0x7ffffeaa5db0 <initial+48>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+112	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+114	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+70	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+73	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+72	in exit.c
+f = <optimized out>
+new_exitfn_called = <optimized out>
+cur = 0x7ffffeaa5d80 <initial>
+76	in exit.c
+f = 0x7ffffeaa5d90 <initial+16>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+77	in exit.c
+f = 0x7ffffeaa5d90 <initial+16>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+112	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+114	in exit.c
+f = <optimized out>
+new_exitfn_called = 7
+cur = 0x7ffffeaa5d80 <initial>
+70	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+120	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+121	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+120	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+121	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+126	in exit.c
+cur = 0x7ffffeaa5d80 <initial>
+53	in exit.c
+No locals.
+59	in exit.c
+cur = <optimized out>
+61	in exit.c
+cur = 0x0
+65	in exit.c
+cur = 0x0
+66	in exit.c
+cur = 0x0
+129	in exit.c
+No locals.
+130	in exit.c
+ptr = <optimized out>
+_IO_cleanup () at genops.c:918
+918	genops.c: No such file or directory.
+result = <optimized out>
+921	in genops.c
+result = <optimized out>
+918	in genops.c
+result = <optimized out>
+921	in genops.c
+result = <optimized out>
+_IO_flush_all_lockp (do_lock=do_lock@entry=0) at genops.c:749
+749	in genops.c
+result = <optimized out>
+fp = <optimized out>
+754	in genops.c
+_buffer = {__routine = 0x7ffffffee160, __arg = 0x7fffff625060 <_rtld_global>, __canceltype = -73200, __prev = 0x0}
+_avail = <optimized out>
+result = 0
+fp = <optimized out>
+755	in genops.c
+__self = <optimized out>
+__self = <optimized out>
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = <optimized out>
+758	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = <optimized out>
+750	in genops.c
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+755	in genops.c
+__self = 0x7fffff7c0f00
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+758	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+755	in genops.c
+__self = 0x7fffff7c0f00
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+758	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+769	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+IO_validate_vtable (vtable=<optimized out>) at libioP.h:870
+870	libioP.h: No such file or directory.
+ptr = <optimized out>
+_IO_flush_all_lockp (do_lock=do_lock@entry=0) at genops.c:762
+762	genops.c: No such file or directory.
+__self = <optimized out>
+__self = <optimized out>
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+769	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+IO_validate_vtable (vtable=<optimized out>) at libioP.h:870
+870	libioP.h: No such file or directory.
+ptr = <optimized out>
+_IO_flush_all_lockp (do_lock=do_lock@entry=0) at genops.c:761
+761	genops.c: No such file or directory.
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+760	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+761	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+764	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+772	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+758	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+774	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5760 <_IO_2_1_stdout_>
+758	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5760 <_IO_2_1_stdout_>
+761	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5760 <_IO_2_1_stdout_>
+760	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5760 <_IO_2_1_stdout_>
+761	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5760 <_IO_2_1_stdout_>
+764	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5760 <_IO_2_1_stdout_>
+772	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5760 <_IO_2_1_stdout_>
+758	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa5760 <_IO_2_1_stdout_>
+774	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa4a00 <_IO_2_1_stdin_>
+758	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa4a00 <_IO_2_1_stdin_>
+761	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa4a00 <_IO_2_1_stdin_>
+760	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa4a00 <_IO_2_1_stdin_>
+761	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa4a00 <_IO_2_1_stdin_>
+764	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa4a00 <_IO_2_1_stdin_>
+772	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa4a00 <_IO_2_1_stdin_>
+758	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x7ffffeaa4a00 <_IO_2_1_stdin_>
+774	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x0
+758	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = 0
+fp = 0x0
+778	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = <optimized out>
+fp = 0x0
+779	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73200, __prev = 0x0}
+_avail = 0
+result = <optimized out>
+fp = 0x0
+783	in genops.c
+result = <optimized out>
+fp = 0x0
+_IO_cleanup () at genops.c:930
+930	in genops.c
+result = <optimized out>
+_IO_unbuffer_all () at genops.c:849
+849	in genops.c
+_buffer = {__routine = 0x7fffff6259f0 <_rtld_global+2448>, __arg = 0x7fffff40f14f <_dl_fini+111>, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = <optimized out>
+fp = <optimized out>
+_IO_cleanup () at genops.c:921
+921	in genops.c
+result = <optimized out>
+930	in genops.c
+result = 0
+_IO_unbuffer_all () at genops.c:849
+849	in genops.c
+_buffer = {__routine = 0x7fffff6259f0 <_rtld_global+2448>, __arg = 0x7fffff40f14f <_dl_fini+111>, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = <optimized out>
+850	in genops.c
+__self = <optimized out>
+__self = <optimized out>
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = <optimized out>
+853	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = <optimized out>
+850	in genops.c
+__self = 0x7fffff7c0f00
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+853	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+850	in genops.c
+__self = 0x7fffff7c0f00
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+853	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+880	in genops.c
+cnt = <optimized out>
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+IO_validate_vtable (vtable=<optimized out>) at libioP.h:870
+870	libioP.h: No such file or directory.
+ptr = <optimized out>
+_IO_unbuffer_all () at genops.c:863
+863	genops.c: No such file or directory.
+__self = <optimized out>
+__result = <optimized out>
+__self = <optimized out>
+cnt = <optimized out>
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+880	in genops.c
+cnt = <optimized out>
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+IO_validate_vtable (vtable=<optimized out>) at libioP.h:870
+870	libioP.h: No such file or directory.
+ptr = <optimized out>
+_IO_unbuffer_all () at genops.c:855
+855	genops.c: No such file or directory.
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+893	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+853	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5680 <_IO_2_1_stderr_>
+855	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5760 <_IO_2_1_stdout_>
+857	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5760 <_IO_2_1_stdout_>
+893	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5760 <_IO_2_1_stdout_>
+853	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa5760 <_IO_2_1_stdout_>
+855	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa4a00 <_IO_2_1_stdin_>
+857	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa4a00 <_IO_2_1_stdin_>
+893	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa4a00 <_IO_2_1_stdin_>
+853	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x7ffffeaa4a00 <_IO_2_1_stdin_>
+897	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x0
+898	in genops.c
+_buffer = {__routine = 0x7ffffe76ab50 <flush_cleanup>, __arg = 0x0, __canceltype = -73120, __prev = 0x7ffffffee258}
+_avail = 0
+fp = 0x0
+_IO_cleanup () at genops.c:933
+933	in genops.c
+result = 0
+__run_exit_handlers (status=0, listp=<optimized out>, run_list_atexit=run_list_atexit@entry=true, run_dtors=run_dtors@entry=true) at exit.c:132
+132	exit.c: No such file or directory.
+No locals.
+__GI__exit (status=status@entry=0) at ../sysdeps/unix/sysv/linux/_exit.c:27
+27	../sysdeps/unix/sysv/linux/_exit.c: No such file or directory.
+No locals.
+31	in ../sysdeps/unix/sysv/linux/_exit.c
+resultvar = <optimized out>
+__arg1 = 0
+_a1 = 0
+resultvar = <optimized out>
+33	in ../sysdeps/unix/sysv/linux/_exit.c
+resultvar = <optimized out>
+__arg1 = <optimized out>
+_a1 = 0
+resultvar = <optimized out>
+31	in ../sysdeps/unix/sysv/linux/_exit.c
+resultvar = <optimized out>
+__arg1 = 0
+_a1 = 0
+resultvar = <optimized out>
+[Inferior 1 (process 674) exited normally]
+No frame selected.
+(gdb) 

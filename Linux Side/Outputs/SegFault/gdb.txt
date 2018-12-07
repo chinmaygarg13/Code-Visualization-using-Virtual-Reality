@@ -1,0 +1,29 @@
+(gdb) Breakpoint 1 at 0x77a: file main.cpp, line 10.
+(gdb) Starting program: /home/chinmay/Documents/btp/SegFault/a.out 
+
+Breakpoint 1, main () at main.cpp:10
+10		int inv_of_5 = mulInv(5);
+(gdb)  > > >mulInv (n=5) at main.cpp:6
+6		int inv = 1/n;
+inv = 0
+7		return inv;
+inv = 0
+8	}
+inv = 0
+main () at main.cpp:11
+11		int inv_ = mulInv(0);
+inv_of_5 = 0
+inv_ = 0
+mulInv (n=0) at main.cpp:6
+6		int inv = 1/n;
+inv = 0
+
+Program received signal SIGFPE, Arithmetic exception.
+0x0000000008000767 in mulInv (n=0) at main.cpp:6
+6		int inv = 1/n;
+inv = 0
+
+Program terminated with signal SIGFPE, Arithmetic exception.
+The program no longer exists.
+No frame selected.
+(gdb) 

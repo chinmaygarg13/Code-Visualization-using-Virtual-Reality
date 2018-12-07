@@ -1,0 +1,13 @@
+#include<iostream>
+//#include<conio.h>
+using namespace std;
+
+int mulInv(int n){
+	int inv = 1/n;
+	return inv;
+}
+int main(){
+	int inv_of_5 = mulInv(5);
+	int inv_ = mulInv(0);
+	return 0;
+}

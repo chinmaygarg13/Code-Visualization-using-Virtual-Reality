@@ -1,0 +1,11 @@
+Function name is: mulInv
+int mulInv(int n){
+	int inv = 1/n;
+	return inv;
+}
+Function name is: main
+int main(){
+	int inv_of_5 = mulInv(5);
+	int inv_ = mulInv(0);
+	return 0;
+}

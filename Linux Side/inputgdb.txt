@@ -1,0 +1,10 @@
+set pagination off
+set confirm off
+set logging on
+break main
+run
+while(1)
+s
+info locals
+end
+set logging off
