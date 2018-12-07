@@ -1,0 +1,7 @@
+CPU seconds used by user = 0.98 
+CPU seconds used by kernel = 0.56 
+Inputs = 0 
+Outputs = 0
+Page Faults = 0 
+Total Memory used (KB) = 10
+CPU percentage used = 91%

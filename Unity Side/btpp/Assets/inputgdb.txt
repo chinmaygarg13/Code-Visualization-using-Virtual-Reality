@@ -1,0 +1,12 @@
+set logging on
+break 7
+run
+print number 
+print count
+n
+n
+print number
+print count
+s
+print count
+set logging off
