@@ -1,0 +1,10 @@
+Function name is: main
+int main () {
+	int fibonacci[5] = {0};
+	fibonacci[1] = 1;
+	int start = 1;
+	for(int i = start++; i < sizeof(fibonacci) / sizeof(fibonacci[0]); ++i) {
+		fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];	
+	}
+	return 0;
+}
